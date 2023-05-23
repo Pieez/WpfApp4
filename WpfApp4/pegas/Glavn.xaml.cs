@@ -25,7 +25,6 @@ namespace WpfApp4.pegas
         {
             InitializeComponent();
             frame1 = frame;
-            InitializeComponent();
             var allTypes = GazetaSmoEntities.GetContext().ProductType.ToList();
             allTypes.Insert(0, new ProductType
             {
@@ -67,7 +66,7 @@ namespace WpfApp4.pegas
 
         private void AddMaska_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            frame1.Navigate(new DobAgent(frame1));
         }
 
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -83,6 +82,11 @@ namespace WpfApp4.pegas
         private void LViewTours_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Dell_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new DelAgent(frame1));
         }
     }
 }

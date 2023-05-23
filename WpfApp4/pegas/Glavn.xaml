@@ -54,8 +54,8 @@
                            Foreground="White" 
                            Cursor="Hand" 
                            MouseLeftButtonDown="AddMaska_MouseLeftButtonDown"/>
-                <TextBlock x:Name="Back"
-                           Text="Назад"
+                <TextBlock x:Name="Dell"
+                           Text="Удалить"
                            Margin="100,5,0,0"
                            FontFamily="Bahnschrift"
                            FontSize="15" 
@@ -63,7 +63,7 @@
                            TextDecorations="Underline"
                            Foreground="White" 
                            Cursor="Hand" 
-                           MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
+                           MouseLeftButtonDown="Dell_MouseLeftButtonDown"/>
             </StackPanel>
         </WrapPanel>
         <ListView Grid.Row="1"
@@ -96,7 +96,7 @@
                             <Image.Source>
                                 <Binding Path="Image">
                                     <Binding.TargetNullValue>
-                                        <Image Source="/Image/picture.png"></Image>
+                                        <ImageSource>/Image/picture.png</ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
                             </Image.Source>
