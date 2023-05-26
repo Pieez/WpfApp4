@@ -29,7 +29,7 @@ namespace WpfApp4.pegas
             frame1 = frame;
             var allTypes = GazetaSmoEntities.GetContext().ProductType.ToList();
             ProductTypes.ItemsSource = allTypes;
-            var uriImageSource = new Uri(@"/maska;component/Image/picture.png", UriKind.RelativeOrAbsolute);
+            var uriImageSource = new Uri(@"/Image/picture.png", UriKind.RelativeOrAbsolute);
             Sources.Source = new BitmapImage(uriImageSource);
             img.Source = Sources.Source;
         }
@@ -54,7 +54,7 @@ namespace WpfApp4.pegas
                 products[0].ProductTypeID = ProductTypes.SelectedIndex + 1;
                 products[0].ArticleNumber = txtArticle.Text;
 
-                var uriImageSource1 = new Uri(@"/product;component/Image/picture.png", UriKind.RelativeOrAbsolute);
+                var uriImageSource1 = new Uri(@"/Image/picture.png", UriKind.RelativeOrAbsolute);
                 if (Sources.Source != img.Source)
                 {
 
